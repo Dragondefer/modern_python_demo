@@ -23,5 +23,3 @@ class Serializable(Protocol):
 class UpperService(Service[str]):
     def process(self, item: str) -> str:
         return item.upper()
-
-*** End Patch
