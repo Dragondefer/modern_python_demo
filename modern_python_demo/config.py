@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, replace
-from typing import Any, Dict, Optional, ContextManager
+from typing import Any, Dict, Iterator, Optional, ContextManager
 from contextlib import contextmanager
 
 try:
@@ -23,7 +23,7 @@ class Config:
 
 
 @contextmanager
-def temp_config(cfg: Config, **overrides) -> ContextManager[Config]:
+def temp_config(cfg: Config, **overrides) -> Iterator[Config]:
     """Temporarily yield an overridden config inside a context manager."""
     new = cfg.with_override(**overrides)
     try:
