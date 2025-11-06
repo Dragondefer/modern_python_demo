@@ -1,0 +1,31 @@
+# venv
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# distribution
+build/
+dist/
+*.egg-info/
+
+# Pytest cache
+.pytest_cache/
+
+# Local settings
+local_settings.py
+
+# mypy
+.mypy_cache/
+
+# Poetry / packaging
+poetry.lock
