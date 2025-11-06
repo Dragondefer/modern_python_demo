@@ -1,13 +1,13 @@
-"""Dynamic plugin discovery and loading.
+"""Plugin loader utilities (moved from conflicting module name).
 
-This module uses pkgutil and importlib to discover subpackages/modules under
-`modern_python_demo.plugins` and loads objects that conform to a Protocol.
+Provides dynamic discovery of plugins under the `modern_python_demo.plugins`
+package and exposes a `discover_plugins` helper.
 """
 from __future__ import annotations
 
 import pkgutil
 import importlib
-from typing import List, Protocol, runtime_checkable, Any, Optional
+from typing import List, Protocol, runtime_checkable, Any
 
 
 @runtime_checkable

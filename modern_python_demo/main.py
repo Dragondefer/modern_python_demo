@@ -13,7 +13,7 @@ from .decorators import timed, memoize_with_limit, with_metadata
 from .metaclasses import RegisteredBase, RegistryMeta
 from .models import Stats, AttrsPoint, Account
 from .events import EventBroker, Scheduler
-from .plugins import discover_plugins
+from .plugin_loader import discover_plugins
 from .serialization import dumps_json, loads_json, dumps_pickle, loads_pickle
 from .cache import fib, perf
 from .introspect import summarize_callable, make_adder, factory_from_spec
